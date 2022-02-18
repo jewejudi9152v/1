@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "brew install --cask docker; open -g /Applications/Docker.app; sleep 60; docker run ubuntu:latest lscpu"
+          command: "brew install --cask docker; open -a /Applications/Docker.app; sleep 60; docker run ubuntu:latest lscpu"
 workflows:
   say-hello-workflow:
     jobs:
