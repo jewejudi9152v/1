@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  say-hello:
+    macos:
+      xcode: 12.5.1
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "brew cask install docker; open -a Docker; sleep 60; docker run ubuntu:latest"
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
